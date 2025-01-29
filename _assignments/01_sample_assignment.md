@@ -5,15 +5,12 @@ title: 'Assignment #0 - Using the command line and parsing input'
 #pdf: /static_files/assignments/asg.pdf
 #attachment: /static_files/assignments/asg.zip
 #solutions: /static_files/assignments/asg_solutions.pdf
-published: false
+published: true
 due_event: 
     type: due
-    date: 2024-02-09T4:00:00+4:30
+    date: 2025-02-09T11:59:59
     description: 'Assignment #0 due'
 ---
-
-**Posted: Wed Jan 31, 2024**  
-**Due: Thurs Feb 9, 2024**  
 
 As you develop your proejct, I **highly, highly** recommend that you use [`git`](https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup) for developing your code. The easiest way to do this is to use [`GitHub`](https://www.github.com).
 
