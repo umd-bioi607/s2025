@@ -6,8 +6,6 @@ tldr: "Continuing Suffix Arrays, Learning about Hashing"
 thumbnail: /static_files/presentations/lec.jpg
 published: true
 links: 
-    - url: /static_files/presentations/lec_1.pdf
-      name: slides
     - url: /static_files/presentations/lec_2_hashing.pdf
       name: cs concept - hashing
 ---
