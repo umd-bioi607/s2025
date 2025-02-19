@@ -1,19 +1,21 @@
 ---
 type: assignment
-date: 2024-02-14T4:00:00+4:30
+date: 2025-02-19T4:00:00+4:30
 title: 'Assignment #1 - Query using the suffix array'
-published: false
+published: true
 due_event: 
     type: due
-    date: 2024-02-28T4:00:00+4:30
+    date: 2024-03-05T4:00:00+4:30
     description: 'Assignment #1 due'
 ---
 
 # Overview
 
 This assignment deals querying of the suffix array.  In order for the suffix array to be generally useful, it is necessary to not only build the index, but also to be able to 
-save it to disk and load it from disk.  Since you're not responsible for suffix array construction in this project, we are providing the relevant pre-computed information 
-(the reference genome string with the `$` appended, and the suffix array itself) as a pickle file for each dataset for which tests will be invoked.
+save it to disk and load it from disk.  **Since you're not responsible for suffix array construction in this project**, we are providing the relevant pre-computed information 
+(the reference genome string with the `$` appended, and the suffix array itself) as a pickle file for each dataset for which tests will be invoked. If you are using Python, 
+the pickle file can be directly read from file (an example is provided in the skeleton project link below). If you are using another languages, most have libraries for reading
+pickle files, and you are welcome and encouraged to use those libraries.
 
 Therefore when you are given the path to an `index` below, this will be a pickle file containing a tuple of the genome and suffix array, which you can load using 
 Python's pickle module.
@@ -93,3 +95,5 @@ your queries using the "simple accelerant" algorithm we covered in class.
 Here, the `query_name` is simply the header of the corresponding FASTA entry (the string after the `>` --- **not including the `>`** on the header line).  The `char_cmp_lb` output tracks the number of **character comparisons** you performed during your binary search to find the lower-bound of the result interval (i.e. the first place where the pattern might occur). Likewise, the `char_cmp_ub` output tracks the number of **character comparisons** you performed during your binary search to find the upp-erbound of the result interval (i.e. the first place where the next pattern greater than the query pattern might occur). In general, you should expect `char_cmp_lb` and `char_cmp_ub` to be (substantially) less with the `simpaccel` search than with the `naive` search. The value `k` is the number of occurrences of the query string in the underlying text on which the suffix array is built.  Finally `hit_1` through `hit_k` are the **positions** in the original text (0-indexed) where the query string occurs.  If a query string does not occur in the text, then you should report `k` = 0, and there will be no `hit_1`, ... etc. entries for that query.
 
 Note, above, that the project specifies that to find the range of all occurrences of the pattern, you should perform **2** binary search queries, one to find the first occurrence of the pattern (if it occurs) and one to find the position immediately past the last occurrence (if it occurs).  If both queries return the same index, then the pattern does not occur in the text.  While there are multiple ways to implement these two binary searches, I highly recommend using the following approach (which is very simple and will allow you to use the same binary search function that you implement for all searches). Let the pattern being searched be `P`.  First, form the pattern `P#` (note that this is just the pattern with `#` appended).  This is a string that must be strictly less than any other occurence of `P` as a prefix of some suffix in the text, since `#` is less than `$, A, C, G, T`. Likewise, for the second search (i.e. to find the upper bound) form the pattern `P}` (this is just the pattern with `}` appended).  This is a string that must be strictly greater than any other occurence of `P`as a prefix of some suffix in the text, since `}` is greather than `$, A, C, G, T`.  At the same time `P}` is less than any other _valid_ prefix `Px` for `x` in `{$, A, C, G, T}`.  Thus, when you search with `P#` you will obtain the lower bound for the search interval, and when you search with `P}`, you will obtain the upper bound.
+
+**Finally**, please note that `simpaccel` is **not** the acclerant version that requires pre-computing all of the LCPs between intervals!  You are not required to implement that variant of search.  Rather, the simple accelerant is the version that retains the LCP between the pattern and the lower bound and the pattern and the upper bound, and propagates those values through the search.  In each iterationof the search, it starts comparing the query to the center suffix at `min(LCP(P, LB), LCP(P, UB))`.
