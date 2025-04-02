@@ -1,20 +1,16 @@
 ---
 type: assignment
-date: 2024-03-11T11:59:00+5:00
-title: "Assignment #2: Pairwise Global Alignment"
-published: false
-#pdf: /static_files/assignments/asg.pdf
-#attachment: /static_files/assignments/asg.zip
-#solutions: /static_files/assignments/asg_solutions.pdf
-#published: true
+date: 2025-04-02T4:00:00+4:30
+title: "Assignment - Pairwise Global Alignment"
+published: true
 due_event: 
     type: due
-    date: 2024-04-03T11:59:00+5:00
-    description: 'Assignment #2 due'
+    date: 2025-02-16T4:00:00+4:30
+    description: 'Assignment due'
 ---
 
 
-# Assignment 3 (global pairwise alignment) : Overview
+# Assignment: Global pairwise alignment (Overview)
 
 This assignment deals with pairwise alignment of strings.  We covered many
 different variants of the alignment problem in class.  For this project, we
@@ -32,7 +28,7 @@ You will write down the optimal alignment in terms of the backtrace through the 
 
 ## Overall structure
 
-You will submit your assignment as a tarball named `BIOI607_A2.tar.gz`.  When this tarball is expanded, it should create a **single** folder named `BIOI607_A3`.  This folder must be created in the directory where the decompression (i.e. `tar xzvf`) is done, and must not be nested inside any other folders. The details of how you structure your "source tree" are up to you, but the following **must** hold (to enable proper automated testing of your programs).
+You will submit your assignment as a tarball named `BIOI607_A2.tar.gz`.  When this tarball is expanded, it should create a **single** folder named `BIOI607_A2`.  This folder must be created in the directory where the decompression (i.e. `tar xzvf`) is done, and must not be nested inside any other folders. The details of how you structure your "source tree" are up to you, but the following **must** hold (to enable proper automated testing of your programs).
 
  * The `saligner` script should live at the top-level of the `BIOI607_A2` folder, and should be marked as executable. As with prior submissions, please ensure that you place the "shebang" at the top of the file, and that you refer directly to `python3` rather than simply `python`.
  
