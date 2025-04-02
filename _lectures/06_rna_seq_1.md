@@ -1,10 +1,10 @@
 ---
 type: lecture
-date: 2024-03-06T0:00:00+5:30
+date: 2025-04-02T0:00:00
 title: RNA-seq alignment, use, and transcript identification
 tldr: "From mappings to events"
 thumbnail: /static_files/presentations/lec.jpg
-published: false
+published: true
 links: 
     - url: /static_files/presentations/lec_rnaseq_1.pdf
       name: slides 
