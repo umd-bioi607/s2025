@@ -5,7 +5,7 @@ title: "Assignment - Pairwise Global Alignment"
 published: true
 due_event: 
     type: due
-    date: 2025-02-16T4:00:00+4:30
+    date: 2025-04-16T4:00:00+4:30
     description: 'Assignment due'
 ---
 
