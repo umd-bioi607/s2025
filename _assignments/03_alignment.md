@@ -39,6 +39,10 @@ You will submit your assignment as a tarball named `BIOI607_A2.tar.gz`.  When th
 
 **Turnin** : The assignment turnin will be handled using Gradescope. The Gradescope submission and autograder for this project should be visible on the course Gradescope website. 
 
+## Sample data
+
+Sample data in the formats specified below is available at [this link](https://github.com/umd-bioi607/assignment_2_sample_data).
+
 ## Input 
 
 Since there is only one program being written in this project, the input will be unfiorm over all invocations of the program.  Therefore, we describe the input here.  Your program `saligner` should take 5 arguments, given in this order:
