@@ -1,15 +1,15 @@
 ---
 type: assignment
-date: 2024-04-10T11:59:00+5:00
+date: 2025-04-23
 title: "Assignment #3: RNA-seq quantification"
-published: false
+published: true
 #pdf: /static_files/assignments/asg.pdf
 #attachment: /static_files/assignments/asg.zip
 #solutions: /static_files/assignments/asg_solutions.pdf
 #published: true
 due_event: 
     type: due
-    date: 2024-04-28T11:59:00+5:00
+    date: 2025-05-07T11:59:00
     description: 'Assignment #3 due'
 ---
 
